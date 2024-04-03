@@ -37,9 +37,8 @@ public class RegistrodeVentasFragment extends Fragment implements Callback<Void>
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_referencias, container, false);
-        nombreReferencia= root.findViewById(R.id.edit_Text_Nombre);
-        apellidoPaternoReferencia = root.findViewById(R.id.edit_Text_Apellido_Paterno);
-        apellidoMaternoReferencia = root.findViewById(R.id.edit_Text_ApellidoMaterno);
+        //nombreReferencia= root.findViewById(R.id.edit_Text_Nombre);
+
         fechadeNacimientoReferencia = root.findViewById(R.id.edit_Text_fechadeNacimiento);
         celularReferencia = root.findViewById(R.id.edit_Text_Celular);
        // telefonoCasaReferencia=root.findViewById(R.id.edit_Text_Telefono);

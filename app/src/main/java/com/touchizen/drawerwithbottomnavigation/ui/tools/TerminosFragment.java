@@ -70,9 +70,9 @@ public class TerminosFragment extends Fragment {
         final WebView webView = root.findViewById(R.id.webview_terminos);
         String url = "https://www.storicard.com/terminos-y-condiciones";
 
-        final WebSettings ajustesVisorWeb = webView.getSettings();
-        ajustesVisorWeb.setJavaScriptEnabled(true);
-        webView.loadUrl("file:///android_asset/myfile.html");
+        //final WebSettings ajustesVisorWeb = webView.getSettings();
+       // ajustesVisorWeb.setJavaScriptEnabled(true);
+       // webView.loadUrl("file:///android_asset/myfile.html");
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_terminos, container, false);
     return root;
