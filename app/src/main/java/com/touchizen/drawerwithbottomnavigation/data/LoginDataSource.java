@@ -32,7 +32,7 @@ public class LoginDataSource implements Callback<LoginResponse> {
             LoggedInUser fakeUser =
                     new LoggedInUser(
                             java.util.UUID.randomUUID().toString(),
-                            "Jane Doe");
+                            " ");
             return new Result.Success<>(fakeUser);
 
         } catch (Exception e) {
