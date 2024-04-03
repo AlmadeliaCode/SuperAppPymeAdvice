@@ -26,7 +26,8 @@ public class AyudaFragment extends Fragment   {
     String[] fechaHora = new String[]{
             "Linea de Ayuda",
             "Correo de Contacto y Sugerencias",
-            "Asistente de Negocio   IA"
+            "Asistente de Negocio   IA",
+            "COPPEL EMPRENDE"
 
     };
 
@@ -34,6 +35,7 @@ public class AyudaFragment extends Fragment   {
             "¿Tu pago no paso y no sabes por que ? Contactanos",
             "En este Correo nos puedes mandar las Sugerencias que tengas",
             "Este assistente te ayudara con generacion de reportes y con solucion de problematicas comunes",
+            "Capacitaciones, contenidos y herramientas dirigidas a dueños y dueñas de negocios",
 
 
     };
@@ -41,13 +43,16 @@ public class AyudaFragment extends Fragment   {
     String[] mensaje = new String[]{
             "7352760364",
             "tecnoplacita@gmail.com",
-            "PEPE-BOT"
+            "PEPE-BOT",
+            "Capacitaciones Financieras"
 
     };
 
     int[] imagenes = {
             R.drawable.baseline_attach_money_24,
-            R.drawable.baseline_attach_money_24
+            R.drawable.baseline_attach_money_24,
+            R.drawable.baseline_attach_money_24,
+            R.drawable.coppel_emprende
 
     };
 
