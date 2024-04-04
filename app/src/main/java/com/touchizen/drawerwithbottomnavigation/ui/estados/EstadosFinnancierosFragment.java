@@ -18,14 +18,15 @@ public class EstadosFinnancierosFragment extends Fragment {
     EstadosListViewAdapter adapter;
 
     String[] titulo = new String[]{
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Agosto",
-            "Octubre"
+            "Movimientos Enero 2024",
+            "Movimientos Febrero 2024",
+            "Movimientos Marzo 2024",
+            "Movimientos Abril 2024",
+            "Movimientos Mayo 2024",
+            "Movimientos Junio 2024",
+            "Movimientos Julio 2024",
+            "Movimientos Agosto 2024",
+            "Movimientos Octubre 2024"
     };
 
     int[] imagenes = {
@@ -36,6 +37,7 @@ public class EstadosFinnancierosFragment extends Fragment {
             R.drawable.baseline_account_balance_24,
             R.drawable.baseline_location_city_24,
             R.drawable.baseline_account_balance_24,
+            R.drawable.baseline_location_city_24,
             R.drawable.baseline_location_city_24
     };
 

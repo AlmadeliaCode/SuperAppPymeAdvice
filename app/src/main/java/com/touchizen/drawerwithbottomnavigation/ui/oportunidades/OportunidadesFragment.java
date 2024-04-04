@@ -32,22 +32,22 @@ public class OportunidadesFragment extends Fragment {
     ListViewAdapterOportunidades adapter;
     String[] titulo = new String[]{
             "Pago de Servicios",
-            "Recargas de Celular",
-            "Mercado Digital",
+            "Mercadito",
+            "Generacion de Estado Financiero (Salud Empresarial)",
     };
 
     String[] mensaje = new String[]{
 
-            "luz,telefono ,internet,gobierno,financieros.",
-            "amazon,microsoft,xbox,play station y muchos mas.",
-            "vende y compra productos online "
+            "recargas ,luz ,amazon ,microsoft y muchos mas.",
+            "vende y compra productos online con los usuarios registrados en Pyme-Advice ",
+            "Generacion de estado  financiero de la  Pyme (para solicitud  de creditos)"
 
     };
 
     int[] imagenes = {
 
             R.drawable.baseline_location_city_24,
-            R.drawable.baseline_phone_iphone_24,
+            R.drawable.baseline_local_grocery_store_24,
             R.drawable.baseline_local_grocery_store_24
 
 
@@ -72,16 +72,21 @@ public class OportunidadesFragment extends Fragment {
                 switch(i){
                     case 0:
 
-                        Fragment Credito = new CreditoFragment();
-                        FragmentTransaction creditoRegalo = getParentFragmentManager().beginTransaction();
-                        creditoRegalo.replace(R.id.nav_host_fragment, Credito);
-                        creditoRegalo.addToBackStack("regalo");
-                        creditoRegalo.commit();
-                        Toast.makeText(getActivity(), "Credito Regalo" , Toast.LENGTH_SHORT).show();
+                      //  Fragment Credito = new CreditoFragment();
+                       // FragmentTransaction creditoRegalo = getParentFragmentManager().beginTransaction();
+                        //creditoRegalo.replace(R.id.nav_host_fragment, Credito);
+                        //creditoRegalo.addToBackStack("regalo");
+                        //creditoRegalo.commit();
+                        //Toast.makeText(getActivity(), "Credito Regalo" , Toast.LENGTH_SHORT).show();
 
-                        break;
+                      //  Fragment RecargasFragment = new RecargasFragment();
+                       // FragmentTransaction transicion = getParentFragmentManager().beginTransaction();
+                        //transicion.replace(R.id.nav_host_fragment, RecargasFragment);
+                         //transicion.addToBackStack("recarga");
 
-                    case 1:
+                         //transicion.commit();
+                          //Toast.makeText(getActivity(), "Recargas" + i, Toast.LENGTH_SHORT).show();
+
                         Fragment PagoServiciosFragment = new PagoServiciosFragment();
                         FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
                         transaction.replace(R.id.nav_host_fragment, PagoServiciosFragment);
@@ -89,16 +94,42 @@ public class OportunidadesFragment extends Fragment {
                         transaction.commit();
                         Toast.makeText(getActivity(), "Pagos de Servicios" + i, Toast.LENGTH_SHORT).show();
 
+
+                        break;
+
+                    case 1:
+                      //  Fragment Credito = new CreditoFragment();
+                       // FragmentTransaction creditoRegalo = getParentFragmentManager().beginTransaction();
+                       // creditoRegalo.replace(R.id.nav_host_fragment, Credito);
+                       // creditoRegalo.addToBackStack("regalo");
+                       // creditoRegalo.commit();
+                        //Toast.makeText(getActivity(), "Credito Regalo" , Toast.LENGTH_SHORT).show();
+
+                        Fragment mercaditoFragmento = new MercaditoFragment();
+                        FragmentTransaction mercadito = getParentFragmentManager().beginTransaction();
+                        mercadito.replace(R.id.nav_host_fragment, mercaditoFragmento);
+                        mercadito.addToBackStack("Mercadito de Emprendedores");
+                        mercadito.commit();
+                        Toast.makeText(getActivity(), "Mercadito de Emprendedores" + i, Toast.LENGTH_SHORT).show();
+
                         break;
 
                     case 2:
-                        Fragment RecargasFragment = new RecargasFragment();
-                        FragmentTransaction transicion = getParentFragmentManager().beginTransaction();
-                        transicion.replace(R.id.nav_host_fragment, RecargasFragment);
-                        transicion.addToBackStack("recarga");
+                        //Fragment RecargasFragment = new RecargasFragment();
+                        //FragmentTransaction transicion = getParentFragmentManager().beginTransaction();
+                        //transicion.replace(R.id.nav_host_fragment, RecargasFragment);
+                       // transicion.addToBackStack("recarga");
                         // Commit a la transacción
-                        transicion.commit();
-                        Toast.makeText(getActivity(), "Recargas" + i, Toast.LENGTH_SHORT).show();
+                       // transicion.commit();
+                      //  Toast.makeText(getActivity(), "Recargas" + i, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "DESCARGANDO EXCEL" + i, Toast.LENGTH_LONG).show();
+
+                      //  Fragment PagoServiciossFragment = new PagoServiciosFragment();
+                       // FragmentTransaction transactionn = getParentFragmentManager().beginTransaction();
+                       // transactionn.replace(R.id.nav_host_fragment, PagoServiciossFragment);
+                       // transactionn.addToBackStack("pago");
+                       // transactionn.commit();
+                       // Toast.makeText(getActivity(), "Pagos de Servicios" + i, Toast.LENGTH_SHORT).show();
 
                         break;
 
@@ -130,11 +161,11 @@ public class OportunidadesFragment extends Fragment {
 
                         break;
                     case 6:
-                        Fragment mercaditoFragmento = new MercaditoFragment();
-                        FragmentTransaction mercadito = getParentFragmentManager().beginTransaction();
-                        mercadito.replace(R.id.nav_host_fragment, mercaditoFragmento);
-                        mercadito.addToBackStack("cupon");
-                        mercadito.commit();
+                     //   Fragment mercaditoFragmento = new MercaditoFragment();
+                      //  FragmentTransaction mercadito = getParentFragmentManager().beginTransaction();
+                      //  mercadito.replace(R.id.nav_host_fragment, mercaditoFragmento);
+                      //  mercadito.addToBackStack("cupon");
+                       // mercadito.commit();
                         Toast.makeText(getActivity(), "Cupones de Descuento" + i, Toast.LENGTH_SHORT).show();
 
                         break;

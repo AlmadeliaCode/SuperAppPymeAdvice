@@ -32,8 +32,8 @@ public class HomeFragment extends Fragment implements Callback<UsuariosReponse> 
             "Productos Disponibles",
             "Clientes Frecuentes",
             "Proveedores",
-            "Genera tus Facturas con IA ",
-            "Marketing Digital"
+            "Calculo pago al SAT",
+            "Email Marketing"
     };
 
     String[] mensaje = new String[]{
@@ -41,9 +41,9 @@ public class HomeFragment extends Fragment implements Callback<UsuariosReponse> 
             "Agregar Productos",
             "Datos de los Clientes",
             "Proveedores registrados",
-            "IA Inteligencia Artificial",
+            "Calculo para presentar tus declaraciones , emitir facturas electrónicas a tus clientes y las calculo de nómina en caso de que tengas trabajadores Utilizando IA",
             "Envio de ofertas a clientes Frecuentes",
-            "email marketing"
+            "Marketing digital enfocado  al envio de correos  de clientes resgistrados e interesados en nuevas ofertas"
     };
 
     int[] imagenes = {

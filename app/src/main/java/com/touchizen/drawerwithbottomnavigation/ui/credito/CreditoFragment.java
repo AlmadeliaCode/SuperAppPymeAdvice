@@ -14,9 +14,13 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.touchizen.drawerwithbottomnavigation.R;
 import com.touchizen.drawerwithbottomnavigation.ui.cupones.ListViewAdapterCupones;
+import com.touchizen.drawerwithbottomnavigation.ui.mercadito.ListViewAdapterMercadito;
+import com.touchizen.drawerwithbottomnavigation.ui.pago.FormulariopagodeserviciosFragment;
+import com.touchizen.drawerwithbottomnavigation.ui.pagoservicios.ListViewAdapterPagoServicios;
 
 public class CreditoFragment extends Fragment  {
 
@@ -45,21 +49,44 @@ public class CreditoFragment extends Fragment  {
 
 
     private TextView recargaLabel=null;
-    private TextView companiaLabel=null;
+    private TextView mercaditoLabel=null;
     private Button bottonRecargas=null;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_credito, container, false);
-      //  recargaLabel= root.findViewById(R.id.id_recarga_Label);
-     //   companiaLabel=root.findViewById(R.id.id_compania_Label);
+        View root = inflater.inflate(R.layout.fragment_mercadito, container, false);
+        //  recargaLabel= root.findViewById(R.id.id_recarga_Label);
+        mercaditoLabel=root.findViewById(R.id.text_nombre);
 
 
 
-    //    final ListView lista = (ListView) root.findViewById(R.id.listViewRecarga1);
+        final ListView lista = (ListView) root.findViewById(R.id.listViewHome);
 
+      //  adapter = new ListViewAdapterMercadito(this, titulo, mensaje,imagenes,inflater);
+        lista.setAdapter(adapter);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onItemClick(AdapterView adapterView, View view, int i, long l) {
+                Fragment pagodeServicios = new FormulariopagodeserviciosFragment();
+                FragmentTransaction pagoServicios = getParentFragmentManager().beginTransaction();
+                pagoServicios.replace(R.id.nav_host_fragment, pagodeServicios);
+                pagoServicios.addToBackStack("tarjetasderegalo");
+                // Commit a la transacción
+                pagoServicios.commit();
+                Toast.makeText(getActivity(), "Tarjetas de regalo" + i, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView adapterView, View view, int i, long l) {
+                Toast.makeText(getActivity(), "presiono LARGO " + i, Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
 
          return root;
     }
